@@ -1,0 +1,244 @@
+/*
+custom-themes.css - simple themes to demo theme switching
+  define color vars, typography, then widget classes using these colors...
+  
+  switching the custom theme class on <body> or <wrapper> does it...
+*/
+
+
+/* custom themes color defs and typography... */
+
+:root {
+  .darkCyanTheme {
+    --thm-primary-color: light-dark(rgb(4, 79, 79), rgb(219, 235, 231));
+    --thm-on-primary-color: light-dark(rgb(219, 235, 231), rgb(4, 79, 79));
+    --thm-on-primary-text-color: light-dark(rgb(240, 240, 240), rgb(10, 10, 10));
+
+    --thm-secondary-color: light-dark(rgb(63, 145, 124), rgb(188, 254, 237));
+    --thm-on-secondary-color: light-dark(rgb(224, 247, 242), rgb(4, 79, 79));
+    --thm-on-secondary-text-color: light-dark(rgb(240, 240, 240), rgb(10, 10, 10));
+
+    --thm-surface-color: light-dark(rgb(253, 251, 243), rgb(6, 20, 20));
+    --thm-on-surface-color: light-dark(rgb(4, 79, 79), rgb(253, 251, 243));
+    --thm-on-surface-text-color: light-dark(rgb(10, 10, 10), rgb(240, 240, 240));
+  
+    --thm-neutral-color: light-dark(rgb(185, 185, 185), rgb(130, 130, 130));
+    --thm-on-neutral-color: light-dark(rgb(9, 91, 91), rgb(253, 251, 243));
+    --thm-on-neutral-text-color: light-dark(rgb(10, 10, 10), rgb(240, 240, 240));
+
+    --thm-error-color: light-dark(rgb(255, 34, 0), rgb(255, 131, 131));
+    --thm-on-error-color: light-dark(rgb(240, 240, 240), rgb(10, 10, 10));
+
+    font-family: cursive;
+    font-style: italic;
+    font-size: 1.1em;
+  }
+
+  .greenTheme {
+    --thm-primary-color: light-dark(rgb(57, 142, 17), rgb(224, 242, 217));
+    --thm-on-primary-color: light-dark(rgb(224, 242, 217), rgb(57, 142, 17));
+    --thm-on-primary-text-color: light-dark(rgb(240, 240, 240), rgb(10, 10, 10));
+
+    --thm-secondary-color: light-dark(rgb(142, 136, 17), rgb(220, 216, 141));
+    --thm-on-secondary-color: light-dark(rgb(253, 251, 243), rgb(83, 78, 4));
+    --thm-on-secondary-text-color: light-dark(rgb(240, 240, 240), rgb(10, 10, 10));
+
+    --thm-surface-color: light-dark(rgb(253, 251, 243), rgb(32, 31, 27));
+    --thm-on-surface-color: light-dark(rgb(30, 81, 6), rgb(253, 251, 243));
+    --thm-on-surface-text-color: light-dark(rgb(10, 10, 10), rgb(240, 240, 240));
+  
+    --thm-neutral-color: light-dark(rgb(185, 185, 185), rgb(130, 130, 130));
+    --thm-on-neutral-color: light-dark(rgb(30, 81, 6), rgb(253, 251, 243));
+    --thm-on-neutral-text-color: light-dark(rgb(10, 10, 10), rgb(240, 240, 240));
+
+    --thm-error-color: light-dark(rgb(255, 34, 0), rgb(255, 131, 131));
+    --thm-on-error-color: light-dark(rgb(240, 240, 240), rgb(10, 10, 10));
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.1em;
+  }
+
+  .brickTheme {
+    --thm-primary-color: light-dark(rgb(114, 43, 27), rgb(250, 238, 218));
+    --thm-on-primary-color: light-dark(rgb(255, 242, 240), rgb(114, 43, 27));
+    --thm-on-primary-text-color: light-dark(rgb(240, 240, 240), rgb(10, 10, 10));
+
+    --thm-secondary-color: light-dark(rgb(142, 110, 103), rgb(240, 225, 196));
+    --thm-on-secondary-color: light-dark(rgb(255, 225, 219), rgb(114, 43, 27));
+    --thm-on-secondary-text-color: light-dark(rgb(240, 240, 240), rgb(10, 10, 10));
+
+    --thm-surface-color: light-dark(rgb(253, 251, 243), rgb(32, 31, 27));
+    --thm-on-surface-color: light-dark(rgb(114, 43, 27), rgb(253, 251, 243));
+    --thm-on-surface-text-color: light-dark(rgb(10, 10, 10), rgb(240, 240, 240));
+  
+    --thm-neutral-color: light-dark(rgb(185, 185, 185), rgb(130, 130, 130));
+    --thm-on-neutral-color: light-dark(rgb(114, 43, 27), rgb(253, 251, 243));
+    --thm-on-neutral-text-color: light-dark(rgb(10, 10, 10), rgb(240, 240, 240));
+
+    --thm-error-color: light-dark(rgb(255, 34, 0), rgb(255, 131, 131));
+    --thm-on-error-color: light-dark(rgb(240, 240, 240), rgb(10, 10, 10));
+  
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+    font-size: 1.2em;
+  }
+  
+  .khakiTheme {
+    --thm-primary-color: light-dark(#5d6051, #c6c8b5);
+    --thm-on-primary-color: light-dark(#c6c8b5, #5d6051);
+    --thm-on-primary-text-color: light-dark(rgb(240, 240, 240), rgb(10, 10, 10));
+
+    --thm-secondary-color: light-dark(#717367, #f3f1dd);
+    --thm-on-secondary-color: light-dark(#f3f1dd, #5e5f58);
+    --thm-on-secondary-text-color: light-dark(rgb(240, 240, 240), rgb(10, 10, 10));
+
+    --thm-surface-color: light-dark(#eff0e4, rgb(32, 31, 27));
+    --thm-on-surface-color: light-dark(#5d6051, #eff0e4);
+    --thm-on-surface-text-color: light-dark(rgb(10, 10, 10), rgb(240, 240, 240));
+  
+    --thm-neutral-color: light-dark(rgb(185, 185, 185), rgb(130, 130, 130));
+    --thm-on-neutral-color: light-dark(rgb(114, 43, 27), rgb(253, 251, 243));
+    --thm-on-neutral-text-color: light-dark(rgb(10, 10, 10), rgb(240, 240, 240));
+
+    --thm-error-color: light-dark(rgb(255, 34, 0), rgb(255, 131, 131));
+    --thm-on-error-color: light-dark(rgb(240, 240, 240), rgb(10, 10, 10));
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: italic;
+    font-size: 1.1em;
+  }
+
+  .oliveTheme {
+    --thm-primary-color: light-dark(#695f00, #d6c862);
+    --thm-on-primary-color: light-dark(#e8e2cd, #4a4737);
+    --thm-on-primary-text-color: light-dark(rgb(240, 240, 240), rgb(10, 10, 10));
+
+    --thm-secondary-color: light-dark(#717367, #ece088);
+    --thm-on-secondary-color: light-dark(#f3f1dd, #5e5f58);
+    --thm-on-secondary-text-color: light-dark(rgb(240, 240, 240), rgb(10, 10, 10));
+
+    --thm-surface-color: light-dark(#f3ede2, #212018);
+    --thm-on-surface-color: light-dark(#212018, #f3ede2);
+    --thm-on-surface-text-color: light-dark(rgb(10, 10, 10), rgb(240, 240, 240));
+  
+    --thm-neutral-color: light-dark(rgb(185, 185, 185), rgb(130, 130, 130));
+    --thm-on-neutral-color: light-dark(#695f00, #ece088);
+    --thm-on-neutral-text-color: light-dark(rgb(10, 10, 10), rgb(240, 240, 240));
+
+    --thm-error-color: light-dark(rgb(255, 34, 0), rgb(255, 131, 131));
+    --thm-on-error-color: light-dark(rgb(240, 240, 240), rgb(10, 10, 10));
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.1em;
+  }
+
+/* End - custom themes */
+
+/* mode classes... */
+
+  .lightTheme {
+    color-scheme: light;
+  }
+  .darkTheme {
+    color-scheme: dark;
+  }
+}
+
+/* blocks, sections, widgets, text, etc - add classes for app-specific theming...
+    only style what's needed to keep themes consistent. Anything can be
+    over-ridden in main css... */
+
+.themed-wrapper {
+  width: 100%;
+  height: 100%;
+  color: var(--thm-on-surface-color);
+  background-color: var(--thm-surface-color);
+}
+
+/* height, width, layout should not be here... */
+.themed-banner {
+  color: var(--thm-on-primary-color);
+  background-color: var(--thm-primary-color);
+}
+
+/* a blank panel... */
+.themed-content {
+  color: var(--thm-on-surface-text-color);
+  background-color: var(--thm-surface-color);
+}
+
+/* boxed div... */
+.themed-content .textDiv {
+  border: 2px solid;
+  border-radius: 12px;
+}
+
+.neutralDiv {
+  color: var(--thm-on-neutral-color);
+  background-color: var(--thm-neutral-color);
+}
+
+.themed-button {
+  height: 40px;
+  padding: 0 15px;
+  font-size: 1.1em;
+  border-radius: 10px;
+  color: var(--thm-on-secondary-color);
+  background-color: var(--thm-secondary-color);
+  font-family: inherit;
+  font-style: inherit;
+}
+
+.themed-errorDiv {
+  padding: 20px 25px;
+  color: var(--thm-error-color);
+  border: 3px solid var(--thm-error-color);
+  border-radius: 12px;
+}
+.themed-errorDiv button {
+  font-weight: bold;
+  color: var(--thm-on-error-color);
+  background-color: var(--thm-error-color);
+}
+
+.themed-label {
+  height: 40px;
+  padding: 8px 10px 0 0;
+
+}
+
+/* height is consistant across input, buttons, and select... */
+.themed-input {
+  height: 40px;
+  padding-left: 10px;
+  font-family: inherit;
+  font-style: inherit;
+  font-size: 1.1em;
+  color: inherit;
+  background-color: inherit;
+  border-radius: 10px;
+}
+.themed-select {
+  height: 40px;
+  padding: 0 15px;
+  font-size: 1.1em;
+  border-radius: 10px;
+  background-color: var(--thm-secondary-color);
+  color: var(--thm-on-secondary-color);
+  font-family: inherit;
+  font-style: inherit;
+}
+.themed-select > option {
+  font-family: inherit !important;
+  font-style: inherit !important;
+}
+
+/* psuedo classes for consistancy... */
+.themed-select:hover, .themed-button:hover, .themed-errorDiv button:hover {
+  filter: brightness(1.4);
+}
+.themed-select:disabled {
+  background-color: var(--thm-neutral-color);
+  cursor: none;
+  filter: brightness(1);
+}

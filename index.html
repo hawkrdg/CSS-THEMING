@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <!-- <base href="/"> -->
+  <link rel="stylesheet" href="./CSS/styles.css">
+  <link rel="stylesheet" href="./CSS/custom-themes.css">
+</head>
+
+<body>
+
+  <!-- standard html, no theme -->
+  <div class="wrapper">
+
+    <div class="banner">
+      <h1>Page With No Theming</h1>
+    </div>
+
+    <div class="content">
+      <div class="textDiv">
+        <h3>Plain Text Div</h3>
+        Phasellus ullamcorper nec enim quis aliquam. Duis pulvinar et arcu pellentesque efficitur. Suspendisse vitae magna gravida, pulvinar tortor vitae, accumsan libero. Nulla non iaculis nibh. Sed consectetur pretium semper. Aenean sit amet tellus justo. 
+      </div>
+      <div class="textDiv">
+        <h3>Neutral Text Div</h3>
+        Phasellus ullamcorper nec enim quis aliquam. Duis pulvinar et arcu pellentesque efficitur. Suspendisse vitae magna gravida, pulvinar tortor vitae, accumsan libero. Nulla non iaculis nibh. Sed consectetur pretium semper. Aenean sit amet tellus justo. 
+      </div>
+      <div class="textDiv">
+        <h3>Plain Text Div</h3>
+        Phasellus ullamcorper nec enim quis aliquam. Duis pulvinar et arcu pellentesque efficitur. Suspendisse vitae magna gravida, pulvinar tortor vitae, accumsan libero. Nulla non iaculis nibh. Sed consectetur pretium semper. Aenean sit amet tellus justo.
+      </div>
+    </div>
+  
+    <div class="control">
+      <label for="selThemes1">Select a Theme:</label>
+      <select name="themes" id="selThemes1" onclick="alert(value)">
+        <option value="darkCyanTheme">Dark Cyan</option>
+        <option value="brickTheme">Brick</option>
+        <option value="greenTheme">Green</option>
+        <option value="khakiTheme">khaki</option>
+      </select>
+      <button class="button" onclick="alert('button')">Button</button>
+    </div>
+
+    <div class="control">
+      <span>
+        <label>Input:</label>
+        <input />
+      </span>
+    </div>
+
+    <div class="control">
+      <span>
+        Error Message...
+        <button onclick="alert('Fix It !')">Fix It !</button>
+      </span>
+    </div>
+  </div>
+
+  <!-- themed html... -->
+  <div class="themed-wrapper">
+
+    <div class="themed-banner">
+      &nbsp;<h2>Themed Page</h2>&nbsp;
+    </div>
+
+    <div class="themed-content">
+      <div class="textDiv">
+        <h3>Plain Text Div</h3>
+        Phasellus ullamcorper nec enim quis aliquam. Duis pulvinar et arcu pellentesque efficitur. Suspendisse vitae magna gravida, pulvinar tortor vitae, accumsan libero. Nulla non iaculis nibh. Sed consectetur pretium semper. Aenean sit amet tellus justo. 
+      </div>
+      <div class="textDiv neutralDiv">
+        <h3>Neutral Text Div</h3>
+        Phasellus ullamcorper nec enim quis aliquam. Duis pulvinar et arcu pellentesque efficitur. Suspendisse vitae magna gravida, pulvinar tortor vitae, accumsan libero. Nulla non iaculis nibh. Sed consectetur pretium semper. Aenean sit amet tellus justo. 
+      </div>
+      <div class="textDiv">
+        <h3>Plain Text Div</h3>
+        Phasellus ullamcorper nec enim quis aliquam. Duis pulvinar et arcu pellentesque efficitur. Suspendisse vitae magna gravida, pulvinar tortor vitae, accumsan libero. Nulla non iaculis nibh. Sed consectetur pretium semper. Aenean sit amet tellus justo.
+      </div>
+    </div>
+    
+    <div class="control">
+      <label class="themed-label" for="selThemes">Select a Theme:</label>
+      <select name="selThemes" id="selThemes" class="themed-select" onclick="setTheme(value)">
+        <option value="darkCyanTheme">Dark Cyan</option>
+        <option value="brickTheme">Brick</option>
+        <option value="greenTheme">Green</option>
+        <option value="khakiTheme">Khaki</option>
+        <option value="oliveTheme">Olive</option>
+      </select>
+      <button id="btnMode" class="themed-button" onclick="toggleMode()"></button>
+    </div>
+    
+    <div class="control">
+      <span>
+        <label class="themed-label">Themed Input:</label>
+        <input class="themed-input" />
+      </span>
+    </div>
+    
+    <div class="control">
+      <span class="themed-errorDiv">
+        Error Message...
+        <button class="themed-button" onclick="alert('Fix It !')">Fix It !</button>
+      </span>
+    </div>
+
+    <div class="control">
+      <!-- <span> -->
+        <button id="disableBtn" class="themed-button" onclick="toggleSelectDisabled()">Disable Select</button>
+      <!-- </span> -->
+    </div>
+  </div>
+
+  <script src="./JS/custom-themes.js" type="text/javascript"></script> 
+  <script src="./JS/code.js" type="text/javascript"></script> 
+
+</body>
+</html>

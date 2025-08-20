@@ -1,0 +1,88 @@
+/* import the custom themes */
+@import './custom-themes.css';
+
+/* some resets... */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+/* css, everything but theme stuff... */
+body {
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+  scrollbar-gutter: stable;
+  overflow-x: hidden;
+
+}
+.wrapper {
+  height: 100%;
+  width: 100%;
+  padding-top: 20px;
+}
+
+.banner {
+  width: calc(100% - 40px);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  height: 80px;
+  margin: 0 20px;
+  border: 2px solid;
+}
+
+.content {
+  display: flex;
+  flex: row;
+  justify-content: space-around;
+  padding: 20px 30px;
+}
+.content .textDiv {
+  display: inline-block;
+  width: 28%;
+  padding: 10px 15px;
+  border: 2px solid;
+}
+.content .textDiv h3 {
+  text-align: center;
+}
+.control {
+  display: flex;
+  flex: row;
+  justify-content: center;
+  margin: 15px 0;
+}
+.control select, .control button {
+  margin: 0 15px;
+}
+
+/* custom themes overrides and adjustments... */
+
+.themed-banner {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 80px;
+}
+.themed-banner h2 {
+  font-size: xx-large;
+  margin: 18px 0 0;
+}
+
+.themed-content {
+  display: flex;
+  flex: row;
+  justify-content: space-around;
+  padding: 20px 30px;
+  font-size: 1.1em;
+}
+.themed-content .textDiv {
+  display: inline-block;
+  width: 28%;
+  padding: 10px 15px;
+}
+.themed-content .textDiv h3 {
+  text-align: center;
+}
+
