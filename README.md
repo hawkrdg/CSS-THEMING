@@ -1,7 +1,7 @@
 # CSS-THEMING
 ## A Vanilla CSS approach to theming... 
 
-This demo is a pure CSS approach to custom theming a web app. While it is a little bit of grunt work setting up theme colors for the first time, but once done this can be plugged into any app.
+This demo is a pure CSS approach to custom theming a web app. While it is a little bit of grunt work setting up theme colors for the first time, once done this can be plugged into any app.
 
 It is worth looking through Google's Material Design color theories to get an idea of palettes and contrasts. This demo is based on my experience as an Angular developer where theming is fairly simple so my viewpoints are biased that way, BUT I believe a quite complete theme does not need 44 css color variables along with nuances, etc (Angular does have a great tool for generating this though...). 
 
